@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Example</title>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+</head>
+<body>
+    <div class ="bg-container">
+    <input type="text" id="textInput" placeholder="Enter text...">
+    <button id="playButton">Convert Text to Speech</button>
+</div>
+    <style>
+        
+        body{
+            background-image: url("https://2.bp.blogspot.com/-D7UsLxXuI0M/WEpjbNDWYfI/AAAAAAAAQ_g/_zFPiSb02qUffqnpeki-gcysxWLhGLtzACLcB/s1600/logo.gif");
+            background-size: cover;
+            height:100%;
+        }
+        .bg-container{
+            text-align: center;
+        }
+        #playButton{
+            background-color: rgb(138, 231, 32);
+            height: 50px;
+            font-size: 20px;
+            color: blue;
+        }
+        #textInput{
+            height: 40px;
+            font-size: 20px;
+        }
+        </style>
+
+    <script>
+        document.getElementById("playButton").addEventListener("click", function() {
+            var text = document.getElementById("textInput").value;
+            var voice = "US English Male"; // Choose a voice name (see available voices)
+            responsiveVoice.speak(text, voice);       });
+    </script>
+</body>
+</html>
